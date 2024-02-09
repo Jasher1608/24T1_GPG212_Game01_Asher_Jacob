@@ -11,7 +11,6 @@ public class Tourist : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
 
     public Nationality nationality { get; private set; }
-    public int height { get; private set; }
     public int weight { get; private set; }
     public string dateOfBirth { get; private set; }
     public char sex { get; private set; }
@@ -23,7 +22,6 @@ public class Tourist : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 
         nationality = (Nationality)Random.Range(0, 4);
-        height = Random.Range(150, 200);
         weight = Random.Range(50, 200);
 
         // Sex
@@ -52,11 +50,6 @@ public class Tourist : MonoBehaviour
             face = facesHolder.femaleFaces[Random.Range(0, facesHolder.femaleFaces.Count)];
         }
         sr.sprite = face;
-    }
-
-    private void Update()
-    {
-        
     }
 }
 
