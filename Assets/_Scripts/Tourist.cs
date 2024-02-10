@@ -6,11 +6,12 @@ using Random = UnityEngine.Random;
 
 public class Tourist : MonoBehaviour
 {
-    [SerializeField] private FacesHolder facesHolder;
+    [SerializeField] private TouristListHolder lists;
 
     [SerializeField] private SpriteRenderer sr;
 
     public Nationality nationality { get; private set; }
+    public string name { get; private set; }
     public int weight { get; private set; }
     public string dateOfBirth { get; private set; }
     public char sex { get; private set; }
@@ -19,6 +20,7 @@ public class Tourist : MonoBehaviour
 
     private void Start()
     {
+        lists = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TouristListHolder>();
         sr = GetComponent<SpriteRenderer>();
 
         nationality = (Nationality)Random.Range(0, 4);
@@ -27,6 +29,20 @@ public class Tourist : MonoBehaviour
         // Sex
         int sexNumber = Random.Range(0, 2);
         sex = sexNumber == 0 ? 'M' : 'F';
+
+        // Name
+        if (sex == 'M')
+        {
+            string firstName = lists.maleFirstNames[Random.Range(0, lists.maleFirstNames.Count)];
+            string lastName = lists.lastNames[Random.Range(0, lists.lastNames.Count)];
+            name = string.Format("{0}, {1}", lastName, firstName);
+        }
+        else
+        {
+            string firstName = lists.femaleFirstNames[Random.Range(0, lists.femaleFirstNames.Count)];
+            string lastName = lists.lastNames[Random.Range(0, lists.lastNames.Count)];
+            name = string.Format("{0}, {1}", lastName, firstName);
+        }
 
         // DOB
         int day = Random.Range(1, 29);
@@ -43,11 +59,11 @@ public class Tourist : MonoBehaviour
         // Sprite
         if (sex == 'M')
         {
-            face = facesHolder.maleFaces[Random.Range(0, facesHolder.maleFaces.Count)];
+            face = lists.maleFaces[Random.Range(0, lists.maleFaces.Count)];
         }
         else
         {
-            face = facesHolder.femaleFaces[Random.Range(0, facesHolder.femaleFaces.Count)];
+            face = lists.femaleFaces[Random.Range(0, lists.femaleFaces.Count)];
         }
         sr.sprite = face;
     }
