@@ -933,10 +933,6 @@ PrefabInstance:
       propertyPath: lists
       value: 
       objectReference: {fileID: 391910184}
-    - target: {fileID: 808596695453796860, guid: 608bb1ba22d76a944aab4654f50d34ac, type: 3}
-      propertyPath: facesHolder
-      value: 
-      objectReference: {fileID: 391910184}
     - target: {fileID: 1276758896358511250, guid: 608bb1ba22d76a944aab4654f50d34ac, type: 3}
       propertyPath: m_Name
       value: Tourist

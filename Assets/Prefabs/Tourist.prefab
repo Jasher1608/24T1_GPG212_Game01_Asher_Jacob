@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 808596695453796860}
   m_Layer: 0
   m_Name: Tourist
-  m_TagString: Untagged
+  m_TagString: Tourist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,5 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25d1cee3dbccf4439d4c1f6e49f9c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  facesHolder: {fileID: 0}
+  lists: {fileID: 0}
   sr: {fileID: 0}
+  AlcardianPassport: {fileID: 0}
+  BrothnianPassport: {fileID: 0}
+  CrazniriPassport: {fileID: 0}
+  DilcinianPassport: {fileID: 0}

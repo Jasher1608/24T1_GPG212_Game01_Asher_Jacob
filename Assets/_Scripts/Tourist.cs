@@ -11,18 +11,32 @@ public class Tourist : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
 
     public Nationality nationality { get; private set; }
-    public string name { get; private set; }
+    public new string name { get; private set; }
     public int weight { get; private set; }
     public string dateOfBirth { get; private set; }
     public char sex { get; private set; }
     public string expiryDate { get; private set; }
     public Sprite face { get; private set; }
+    public int faceIndex { get; private set; }
+    
+    [SerializeField] public bool isPassportCorrect { get; private set; }
+
+    [SerializeField] private GameObject AlcardianPassport;
+    [SerializeField] private GameObject BrothnianPassport;
+    [SerializeField] private GameObject CrazniriPassport;
+    [SerializeField] private GameObject DilcinianPassport;
 
     private void Start()
     {
         lists = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TouristListHolder>();
         sr = GetComponent<SpriteRenderer>();
 
+        InitializeTourist();
+        GeneratePassport();
+    }
+
+    private void InitializeTourist()
+    {
         nationality = (Nationality)Random.Range(0, 4);
         weight = Random.Range(50, 200);
 
@@ -59,13 +73,60 @@ public class Tourist : MonoBehaviour
         // Sprite
         if (sex == 'M')
         {
-            face = lists.maleFaces[Random.Range(0, lists.maleFaces.Count)];
+            faceIndex = Random.Range(0, lists.maleFaces.Count);
+            face = lists.maleFaces[faceIndex];
         }
         else
         {
-            face = lists.femaleFaces[Random.Range(0, lists.femaleFaces.Count)];
+            Random.Range(0, lists.femaleFaces.Count);
+            face = lists.femaleFaces[faceIndex];
         }
         sr.sprite = face;
+
+        // Passport
+        isPassportCorrect = (Random.Range(0, 2) == 1);
+    }
+
+    private void GeneratePassport()
+    {
+        if (isPassportCorrect)
+        {
+            switch (nationality)
+            {
+                case Nationality.Alcardian:
+                    Instantiate(AlcardianPassport);
+                    break;
+                case Nationality.Brothnian:
+                    Instantiate(BrothnianPassport);
+                    break;
+                case Nationality.Crazniri:
+                    Instantiate(CrazniriPassport);
+                    break;
+                case Nationality.Dilcinian:
+                    Instantiate(DilcinianPassport);
+                    break;
+            }
+        }
+        else
+        {
+            int randomPassport = Random.Range(1, 5);
+
+            switch (randomPassport)
+            {
+                case 1:
+                    Instantiate(AlcardianPassport);
+                    break;
+                case 2:
+                    Instantiate(BrothnianPassport);
+                    break;
+                case 3:
+                    Instantiate(CrazniriPassport);
+                    break;
+                case 4:
+                    Instantiate(DilcinianPassport);
+                    break;
+            }
+        }
     }
 }
 
