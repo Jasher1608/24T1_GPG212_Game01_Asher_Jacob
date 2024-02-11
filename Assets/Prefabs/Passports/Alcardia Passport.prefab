@@ -1026,6 +1026,7 @@ GameObject:
   - component: {fileID: 3430592855646278646}
   - component: {fileID: -1161295499207130597}
   - component: {fileID: 9046747161541260870}
+  - component: {fileID: -6644852544966374631}
   m_Layer: 0
   m_Name: Alcardia Passport
   m_TagString: Untagged
@@ -1158,6 +1159,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03dbced1b9c97f46b3c909f9ee67252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6644852544966374631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032979654763524912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1e6a6a1b917fe47abad8d1a914ea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 7526529482163644495}
+  photo: {fileID: 7288423104673468353}
+  passportFaceIndex: 0
+  serialNumber: 
+  serialText: {fileID: 7086986272999778052}
+  dateOfBirthText: {fileID: 754668618756380191}
+  sexText: {fileID: 6646370773784472752}
+  natText: {fileID: 2137325462375197169}
+  expiryDateText: {fileID: 4599138500472454510}
 --- !u!1 &6128512667497370489
 GameObject:
   m_ObjectHideFlags: 0

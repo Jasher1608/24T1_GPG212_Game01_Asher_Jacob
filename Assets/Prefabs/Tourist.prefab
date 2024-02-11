@@ -99,7 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lists: {fileID: 0}
   sr: {fileID: 0}
-  AlcardianPassport: {fileID: 0}
-  BrothnianPassport: {fileID: 0}
-  CrazniriPassport: {fileID: 0}
-  DilcinianPassport: {fileID: 0}
+  isPassportCorrect: 0
+  AlcardianPassport: {fileID: 6032979654763524912, guid: aba42cd2d32dde84ca59c9853b9d1112, type: 3}
+  BrothnianPassport: {fileID: 1771133881299765840, guid: bd90d3bb3756fe1499a975f008f05e71, type: 3}
+  CrazniriPassport: {fileID: 7531559652920794453, guid: 2e575216c8c70c74abf256e7b4a192cc, type: 3}
+  DilcinianPassport: {fileID: 5347345094311927752, guid: 4d0a11ec43bc4cc4d9f36d24d891ce52, type: 3}

@@ -1207,8 +1207,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6857477000587335822}
   - component: {fileID: 398594120981841371}
-  - component: {fileID: 2322393055032027025}
   - component: {fileID: 4822647737565622563}
+  - component: {fileID: 2322393055032027025}
+  - component: {fileID: 972327675934752694}
   m_Layer: 0
   m_Name: Dilcinia Passport
   m_TagString: Untagged
@@ -1284,18 +1285,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2322393055032027025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5347345094311927752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f03dbced1b9c97f46b3c909f9ee67252, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &4822647737565622563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1341,6 +1330,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75953037, y: 0.48422426}
   m_EdgeRadius: 0
+--- !u!114 &2322393055032027025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347345094311927752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03dbced1b9c97f46b3c909f9ee67252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &972327675934752694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347345094311927752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1e6a6a1b917fe47abad8d1a914ea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 4208651765633702193}
+  photo: {fileID: 6139915612113337577}
+  passportFaceIndex: 0
+  serialNumber: 
+  serialText: {fileID: 8135602370732057479}
+  dateOfBirthText: {fileID: 4424582864978958246}
+  sexText: {fileID: 6536530530381675084}
+  natText: {fileID: 1482379861268862907}
+  expiryDateText: {fileID: 6562574740564370440}
 --- !u!1 &5650599719476747961
 GameObject:
   m_ObjectHideFlags: 0

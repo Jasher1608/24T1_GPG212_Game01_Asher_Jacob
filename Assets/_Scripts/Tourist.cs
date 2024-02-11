@@ -18,8 +18,8 @@ public class Tourist : MonoBehaviour
     public string expiryDate { get; private set; }
     public Sprite face { get; private set; }
     public int faceIndex { get; private set; }
-    
-    [SerializeField] public bool isPassportCorrect { get; private set; }
+
+    public bool isPassportCorrect; // Can be set from Passport script
 
     [SerializeField] private GameObject AlcardianPassport;
     [SerializeField] private GameObject BrothnianPassport;

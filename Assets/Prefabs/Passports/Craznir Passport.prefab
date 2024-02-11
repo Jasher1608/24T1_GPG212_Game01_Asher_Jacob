@@ -1850,6 +1850,7 @@ GameObject:
   - component: {fileID: 8493413335894849846}
   - component: {fileID: -1106013957100407012}
   - component: {fileID: -8365305283222409857}
+  - component: {fileID: 6908404638311569643}
   m_Layer: 0
   m_Name: Craznir Passport
   m_TagString: Untagged
@@ -1982,6 +1983,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03dbced1b9c97f46b3c909f9ee67252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6908404638311569643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531559652920794453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1e6a6a1b917fe47abad8d1a914ea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 4540589208347246811}
+  photo: {fileID: 7330114604770878290}
+  passportFaceIndex: 0
+  serialNumber: 
+  serialText: {fileID: 7318601980992192167}
+  dateOfBirthText: {fileID: 2280918940483877443}
+  sexText: {fileID: 2179881283643903077}
+  natText: {fileID: 6331082051994877996}
+  expiryDateText: {fileID: 8833940026518016495}
 --- !u!1 &8805991060457131393
 GameObject:
   m_ObjectHideFlags: 0
