@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using Random = UnityEngine.Random;
 
 public class Tourist : MonoBehaviour
@@ -26,10 +27,13 @@ public class Tourist : MonoBehaviour
     [SerializeField] private GameObject CrazniriPassport;
     [SerializeField] private GameObject DilcinianPassport;
 
+    private TextMeshProUGUI weightText;
+
     private void Start()
     {
         lists = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TouristListHolder>();
         sr = GetComponent<SpriteRenderer>();
+        weightText = GameObject.FindGameObjectWithTag("WeightText").GetComponent<TextMeshProUGUI>();
 
         InitializeTourist();
         GeneratePassport();
@@ -39,6 +43,7 @@ public class Tourist : MonoBehaviour
     {
         nationality = (Nationality)Random.Range(0, 4);
         weight = Random.Range(50, 200);
+        weightText.text = weight.ToString();
 
         // Sex
         int sexNumber = Random.Range(0, 2);
